@@ -1,4 +1,4 @@
-{% set version = "0.16.0" %}
+{% set version = "0.18.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/a/anemoi-models/anemoi_models-{{ version }}.tar.gz
-  sha256: 1c798f93786f0f415b476a24eb123b48345b8f218fd6bd8711ebc17f31643848
+  url: https://files.pythonhosted.org/packages/source/a/anemoi-models/anemoi_models-{{ version }}.tar.gz
+  sha256: 1db3392b6754e886b11dbf2ecf6c406b3bde45ead82b4401d4ac8383842f2e94
 
 build:
   entry_points:
