@@ -1,0 +1,58 @@
+schema_version: 1
+
+context:
+  version: "0.17.0"
+
+package:
+  name: anemoi-models
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/a/anemoi-models/anemoi_models-${{ version }}.tar.gz
+  sha256: acc26d75acbf2857f1991d06d50559b6d81ddd319fdda9d76f5bb79644e86e36
+
+build:
+  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+    - anemoi-models = anemoi.models.__main__:main
+  noarch: python
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=61
+    - setuptools-scm >=8
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - anemoi-graphs >=0.9.4
+    - anemoi-utils >=0.1.9
+    - einops >=0.6.1
+    - hydra-core >=1.3
+    - scipy >=1.6
+    - pytorch <2.11,>=2.3
+    - pytorch_geometric >=2.3
+
+tests:
+  - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+      imports:
+        - anemoi.models
+      pip_check: true
+
+about:
+  summary: A package to hold various functions to support training of ML models.
+  license: Apache-2.0
+  license_file: LICENSE
+  documentation: https://anemoi-models.readthedocs.io/
+  homepage: https://github.com/ecmwf/anemoi-core/
+
+extra:
+  recipe-maintainers:
+    - tjtg
+    - jasonjunweilyu
+    - HCookie
