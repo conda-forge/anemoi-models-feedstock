@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.17.0"
+  version: "0.18.0"
 
 package:
   name: anemoi-models
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/a/anemoi-models/anemoi_models-${{ version }}.tar.gz
-  sha256: acc26d75acbf2857f1991d06d50559b6d81ddd319fdda9d76f5bb79644e86e36
+  sha256: 1db3392b6754e886b11dbf2ecf6c406b3bde45ead82b4401d4ac8383842f2e94
 
 build:
   number: 0
