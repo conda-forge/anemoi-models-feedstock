@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.19.0"
+  version: "0.20.0"
 
 package:
   name: anemoi-models
@@ -9,14 +9,14 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/a/anemoi-models/anemoi_models-${{ version }}.tar.gz
-  sha256: adc6a0ee2da75074cda5c61811e57dfad967f614e55697dc8e81d234385c2ab4
+  sha256: aade1d61c320bc17d4b4fe7ae710e221da3f43ea145a7bc05c79b54e8d3381ff
 
 build:
   number: 0
   script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
-    - anemoi-models = anemoi.models.__main__:main
+      - anemoi-models = anemoi.models.__main__:main
   noarch: python
 
 requirements:
