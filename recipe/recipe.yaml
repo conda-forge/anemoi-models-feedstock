@@ -27,7 +27,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - anemoi-graphs >=0.9.9
+    - anemoi-graphs >=0.9.4
     - anemoi-utils >=0.1.9
     - einops >=0.6.1
     - hydra-core >=1.3
