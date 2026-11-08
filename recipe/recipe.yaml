@@ -12,7 +12,7 @@ source:
   sha256: aade1d61c320bc17d4b4fe7ae710e221da3f43ea145a7bc05c79b54e8d3381ff
 
 build:
-  number: 0
+  number: 1
   script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
@@ -32,7 +32,7 @@ requirements:
     - einops >=0.6.1
     - hydra-core >=1.3
     - scipy >=1.6
-    - pytorch <2.11,>=2.3
+    - pytorch >=2.6,<2.12
     - pytorch_geometric >=2.3
 
 tests:
